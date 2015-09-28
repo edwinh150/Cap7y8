@@ -22,20 +22,18 @@ namespace Cap7y8
 
         private void Mostrarbutton_Click(object sender, EventArgs e)
         {
-            string Cadena1 = Cadena1textBox.Text;
-            string Cadena2 = Cadena2textBox.Text;
-            string Unir = Cadena1 + Cadena2;
-            Cadena.Add(Unir);
+            Cadena.Add(Cadena1textBox.Text);
+            Cadena.Add(Cadena2textBox.Text);
+
             Cadena.Sort();
 
             foreach (string cad in Cadena)
             {
                 ResultadolistBox.Items.Add(cad);
             }
-            Cadena1textBox.Text = " ";
-            Cadena2textBox.Text = " ";
 
-
+            Cadena1textBox.Text = "";
+            Cadena2textBox.Text = "";
         }
     }
 }
